@@ -1,16 +1,13 @@
 import React from 'react'
 
-import Default from '../templates/Default';
+import { AppFooter, AppHeader, } from '../organisms';
 
 export default function Cadastro() {
   return (
     <body>
-    <header>
-        <nav>
-            <h1><a href="/">Tera Agenda</a></h1>              
-        </nav>
-    </header>   
-
+    
+    <AppHeader/>  
+ 
     <main> 
 
         <form action="/login" id="formCadastre" className="size-margin-90-5 gapColuna" onsubmit=" funcConfirmar(event)">
@@ -19,7 +16,7 @@ export default function Cadastro() {
             <label htmlFor="razaoSocial">Razão Social*</label>
             <input name="razaoSocial" type="text" id="razaoSocial" placeholder="Informe a Razão Social" required />
         </div>
-
+ 
         <div>
             <label htmlFor="cnpj">CNPJ*</label>
             <input name="cnpj" type="text" id="cnpj" placeholder="00.000.000/000-00" required />
@@ -101,13 +98,12 @@ export default function Cadastro() {
             <div id="divBtnEnviar">
                 <button type="submit" value="Validar" id="btnEnviar">Enviar</button>
               </div>
-              </form> 
+              </form>               
                          
     </main>
 
-<Default></Default>
+<AppFooter/>
 
-    <script src="https://unpkg.com/imask"></script>
     
 </body>
 
