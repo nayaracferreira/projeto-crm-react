@@ -1,35 +1,111 @@
 import React from 'react'
 
-import calendario from'../../assets/calendario.jpg';
-import quemSomos from'../../assets/quem_somos.png.opdownload';
+import { AppFooter, AppHeader, } from '../organisms';
 
-import { AppHeaderHome, AppFooter } from '../organisms';
-
-export default function Home() {
+export default function Cadastro() {
   return (
     <body>
+    
+    <AppHeader/>  
+ 
+    <main> 
 
-    <AppHeaderHome/>
-
-    <main>
-        <h2 className="textShadowTitles size-margin-90-5">Agendar é o melhor compromisso para o seu negócio</h2>
-        <div id="calendario" className="size-margin-90-5">
-             <p>
-                Facilita a consulta de horários e o histórico do cliente.
-            </p>
-            <img src={calendario} alt="Imagem de um calendário com pinos grudados nas datas" />
+        <form action="/login" id="formCadastre" className="size-margin-90-5 gapColuna" onsubmit=" funcConfirmar(event)">
+            <h2 className="textShadowTitles">Cadastre suas informações</h2>
+        <div>
+            <label htmlFor="razaoSocial">Razão Social*</label>
+            <input name="razaoSocial" type="text" id="razaoSocial" placeholder="Informe a Razão Social" required />
+        </div>
+ 
+        <div>
+            <label htmlFor="cnpj">CNPJ*</label>
+            <input name="cnpj" type="text" id="cnpj" placeholder="00.000.000/000-00" required />
         </div>
 
-        <h2 id="quemSomosTitulo" className="textShadowTitles size-margin-90-5">Quem Somos?</h2>
-        <div id="quemSomos" className="size-margin-90-5">            
-            <img src={quemSomos} alt="Círculo com a silhueta de pessoas suaa forma e ao centro dele a frase Quem Somos?" />
-            <p>Gestão de agendamento é o elo entre o planejamento de algo e sua execução. Seu software de gestão de agendamento deve fornecer uma visão geral do trabalho em andamento que permita o rastreamento desde a concepção até a conclusão. Bem-vindo ao Tera Agenda: junte-se a equipes em todo o mundo que usam nossos painéis estilo único para obter uma visão clara do progresso de agendamento. Vamos nos organizar juntos!
-            </p>           
+        <div>
+            <label htmlFor="fone">Telefone comercial*</label>
+            <input name="fone" type="tel" id="fone" placeholder="(00) 00000-0000" required />
         </div>
+       
+        <div>
+            <label fhtmlFor="email">E-mail*</label>
+            <input name="email" type="email" id="email" placeholder="...@email.com" required />
+        </div>
+
+        <div className="local gapColuna">     
+            <div>
+                <label htmlFor="cep">Cep*</label>
+                <input name="cep" type="text" id="cep" placeholder="Ex:012345-678" required />
+            </div>
+
+            <div>
+                <label htmlFor="logradouro">Endereço*</label>
+                <input name="logradouro" type="text" id="logradouro" placeholder="Ex:Rua Vinte e Cindo de ..." />
+            </div>
+
+            <div>
+                <label htmlFor="numero">Número*</label>
+                <input name="numero" type="text" id="numero" placeholder="Ex:123" required />
+            </div>
+
+            <div>
+                <label htmlFor="blocoSala">Bloco/Sala</label>
+                <input name="blocoSala" type="text" id="blocoSala" placeholder="Número do bloco ou sala" />
+            </div>
+
+            <div>
+                <label htmlFor="bairro">Bairro*</label>
+                <input name="bairro" type="text" id="bairro" placeholder="Informe o bairro" />
+            </div>
+
+            <div>
+                <label htmlFor="localidade">Cidade*</label>
+                <input name="localidade" type="text" id="localidade" placeholder="Informe a cidade" />
+            </div>
+     
+            <div>
+                <label htmlFor="uf">UF*</label>
+                <input name="uf" type="text" id="uf" placeholder="Informe a UF" />                
+            </div>    
+        </div>
+               
+        <div>
+            <label htmlFor="cadastroSenha">Senha*</label>
+            <input name="cadastroSenha" type="password" id="cadastroSenha" placeholder="Informe a senha" minlength="8" maxlength="8" required />
+        </div>
+
+        <div>
+            <label htmlFor="confirmSenha">Confirme a senha*</label>
+            <input name="confirmSenha" type="password" id="confirmSenha" placeholder="Confirme a senha" minlength="8" maxlength="8" required />
+        </div>
+
+        <h3 className="textShadowTitles">Responsável pela empresa</h3>
+           
+            <div>
+                <label htmlFor="nome">Nome completo*</label>
+                <input name="nome" type="text" id="nome" placeholder="Digite seu nome completo" required />
+            </div>
+
+            <div>
+                <label htmlFor="fonePessoal">Telefone*</label>
+                <input name="fonePessoal" type="tel" id="fonePessoal" placeholder="(00) 00000-0000" required />
+            </div>
+           
+            <div className="campo">
+                <p>(*) Campo obrigatório</p>                    
+            </div>
+
+            <div id="divBtnEnviar">
+                <button type="submit" value="Validar" id="btnEnviar">Enviar</button>
+              </div>
+              </form>               
+                         
     </main>
 
-  <AppFooter/>    
+<AppFooter/>
+
     
 </body>
+
   )
 }
