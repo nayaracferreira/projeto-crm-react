@@ -1,25 +1,23 @@
 import React from 'react'
 
-import Default from '../templates/Default';
-
 import desenho from'../../assets/desenho.jpg';
+
+import { AppFooter, AppHeader } from '../organisms';
 
 
 export default function Agenda() {
   return (
     <body>    
-    <header>        
-        <nav>
-            <h1><a href="index.html">Tera Agenda</a></h1>            
-        </nav>
-    </header> 
+    
+    <AppHeader/>
 
     <main>
         <h2 className="textShadowTitles">Desculpe-nos, página em construção...</h2>
-        <img src={desenho} alt="Imagem do site Dreamstime - Desenho de um homem vestido com epi(Equipamento de Proteção Individual) com os dois braços meio levantado demonstrando o sinal de parada" style="display:flex; align-self:center; margin-top: 10px;" />       
+        <img src={desenho} className="provisorio" alt="Imagem do site Dreamstime - Desenho de um homem vestido com epi(Equipamento de Proteção Individual) com os dois braços meio levantado demonstrando o sinal de parada" />       
     </main>
 
-   <Default></Default>
+   <AppFooter/>
+   
 </body>
   )
 }
