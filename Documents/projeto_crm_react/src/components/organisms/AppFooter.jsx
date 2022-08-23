@@ -21,10 +21,10 @@ export default function AppFooter() {
         <img src={logoGmail} alt="Logo Gmail: a representação de um envelope fechado" />        
     </div>
     <div>
-    <a href="#">nayara.dcf@gmail.com</a>
+    <a href="http://gmail.com">nayara.dcf@gmail.com</a>
     </div>
     <div>
-    <a href="#">renatogamedesigner@gmail.com</a>
+    <a href="http://gmail.com">renatogamedesigner@gmail.com</a>
     </div>
     
     <p id="cComercial">© 2022 Tera Agenda Serviços de Tecnologia Ltda.
