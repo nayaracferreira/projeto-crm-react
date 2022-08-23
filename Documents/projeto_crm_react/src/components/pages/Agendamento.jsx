@@ -1,20 +1,13 @@
 import React from 'react'
 
-import Default from '../templates/Default';
-
-import logoCalendario from'../../assets/calendario_verde.png';
+import '../../styles/style.css';
+import { AppFooter, AppHeaderAgendamento } from '../organisms';
 
 export default function Agendamento() {
   return (
     <body>    
-    <header>        
-        <nav>
-            <h1><a href="/">Tera Agenda</a></h1>
-            <a id="consulteAgenda" href="login/company/:companyId/clients/:clientsId"><img src={logoCalendario} alt="Imagem de uma folha de calendário com sinal de visto como verificação no centro" />
-                <p>Consulte</p>
-            </a> 
-        </nav>
-    </header> 
+    
+    <AppHeaderAgendamento/>
 
     <main>
         <h2 className="textShadowTitles">Cadastre as informações do seu cliente</h2>
@@ -89,10 +82,10 @@ export default function Agendamento() {
         
     </main>
 
- <Default></Default>
+ <AppFooter/>
 
-        <script src="https://unpkg.com/imask"></script>
-    <script src="app_agenda.js"></script>
+        {/* <script src="https://unpkg.com/imask"></script> */}
+    {/* <script src="agendamento.js"></script> */}
 </body>
   )
 }
