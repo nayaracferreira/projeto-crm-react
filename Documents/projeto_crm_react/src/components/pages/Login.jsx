@@ -29,7 +29,7 @@ export default function Login() {
                 <input type="checkbox" checked="cheked" />Lembrar-me
             </label>
 
-            <a href="agendamento.html" aria-label="Entrar: Encaminha para a página de agendamento"></a>
+            <a href="/login/company/:companyId" aria-label="Entrar: Encaminha para a página de agendamento"></a>
             <button type="submit" className="btnAcesso">Entrar</button>            
         </form>
         
