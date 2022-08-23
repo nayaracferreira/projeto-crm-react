@@ -1,21 +1,15 @@
 import React from 'react'
 
-import Default from '../templates/Default';
-
-import avatar from'../../assets/avatar-verde.png';
 import calendario from'../../assets/calendario.jpg';
 import quemSomos from'../../assets/quem_somos.png.opdownload';
+
+import { AppHeaderHome, AppFooter } from '../organisms';
 
 export default function Home() {
   return (
     <body>
-    <header>        
-        <nav>
-            <h1 className="textShadowTitles">Tera Agenda</h1>
-            <a href="/login"><img src={avatar} alt="Logo em forma redonda com a silhueta de um busto no centro"/>
-            </a>           
-        </nav>
-    </header>
+
+    <AppHeaderHome/>
 
     <main>
         <h2 className="textShadowTitles size-margin-90-5">Agendar é o melhor compromisso para o seu negócio</h2>
@@ -34,7 +28,7 @@ export default function Home() {
         </div>
     </main>
 
-  <Default></Default>    
+  <AppFooter/>    
     
 </body>
   )
