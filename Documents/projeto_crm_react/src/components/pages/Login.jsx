@@ -1,15 +1,13 @@
 import React from 'react'
 
-import Default from '../templates/Default';
+import { AppFooter, AppHeader } from '../organisms';
+
 
 export default function Login() {
   return (
-    <body>    
-    <header>        
-        <nav>
-            <h1><a href="/" aria-label="Tera Agenda: Encaminha para a página inicial">Tera Agenda</a></h1>                
-        </nav>
-    </header>
+    <body>  
+
+    <AppHeader/>
     
     <main>
 
@@ -44,7 +42,7 @@ export default function Login() {
         </div>
     </main>
     
-<Default></Default>            
+<AppFooter/>            
 
 </body>
   )
