@@ -15,7 +15,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/cadastro' element={<Cadastro/>}/>
         <Route path='/login/company/:companyId' element={<Agendamento/>}/>
-        <Route path='login/company/:companyId/clients/:clientsId' element={<Agenda/>}/>
+        <Route path='/clients' element={<Agenda/>}/>
     </Routes>
     </BrowserRouter>      
   );
