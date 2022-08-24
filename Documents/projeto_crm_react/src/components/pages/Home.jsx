@@ -7,7 +7,7 @@ import { AppHeaderHome, AppFooter } from '../organisms';
 
 export default function Home() {
   return (
-    <body>
+    <div className="body">
 
     <AppHeaderHome/>
 
@@ -30,6 +30,6 @@ export default function Home() {
 
   <AppFooter/>    
     
-</body>
+</div>
   )
 }
