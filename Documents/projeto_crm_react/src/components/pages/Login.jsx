@@ -5,7 +5,7 @@ import { AppFooter, AppHeader } from '../organisms';
 
 export default function Login() {
   return (
-    <body>  
+    <div className="body">  
 
     <AppHeader/>
     
@@ -22,11 +22,11 @@ export default function Login() {
 
             <div>
                 <label htmlFor="senha">Senha</label>
-                <input name="senha" type="password" id="senha" placeholder="Digite sua senha" minlength="8" maxlength="8" required />
+                <input name="senha" type="password" id="senha" placeholder="Digite sua senha" minLength="8" maxLength="8" required />
             </div>
 
             <label>
-                <input type="checkbox" checked="cheked" />Lembrar-me
+                <input type="checkbox" defaultChecked="cheked" />Lembrar-me
             </label>
 
             <a href="/login/company/:companyId" aria-label="Entrar: Encaminha para a página de agendamento"></a>
@@ -44,6 +44,6 @@ export default function Login() {
     
 <AppFooter/>            
 
-</body>
+</div>
   )
 }
