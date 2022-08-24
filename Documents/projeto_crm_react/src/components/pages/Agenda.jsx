@@ -7,7 +7,7 @@ import { AppFooter, AppHeader } from '../organisms';
 
 export default function Agenda() {
   return (
-    <body>    
+    <div className="body">    
     
     <AppHeader/>
 
@@ -18,6 +18,6 @@ export default function Agenda() {
 
    <AppFooter/>
    
-</body>
+</div>
   )
 }
