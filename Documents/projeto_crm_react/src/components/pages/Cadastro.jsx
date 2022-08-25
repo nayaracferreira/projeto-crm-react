@@ -1,68 +1,73 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import { AppFooter, AppHeader, Cep } from '../organisms';
+import { AppFooter, AppHeader, Cep, ImaskCnpj, Imask} from '../organisms/Index';
 
 export default function Cadastro() {
+
+    const [cadastroSenha, setcadastroSenha] = useState({});
+    const [confSenha, setConfSenha] = useState({});
+
+    const validaSenha = (event) => {  
+        if (cadastroSenha === confSenha){
+        window.alert("Seu cadastro foi concluído com sucesso!");                  
+        } else{
+            window.alert('AS SENHAS ESTÃO DIFERENTES');  
+            event.preventDefault()                   
+        }        
+        
+    }      
+          
   return (
-  
+    
     <div className="body">
     
     <AppHeader/>  
  
     <main> 
 
-        <form action="/login" id="formCadastre" className="size-margin-90-5 gapColuna" onSubmit=" funcConfirmar(event)">
+        <form action="/login" className="formCadastre" onSubmit={validaSenha}>
             <h2 className="textShadowTitles">Cadastre suas informações</h2>
         <div>
             <label htmlFor="razaoSocial">Razão Social*</label>
-            <input name="razaoSocial" type="text" id="razaoSocial" placeholder="Informe a Razão Social" required />
+            <input name="razaoSocial" type="text" placeholder="Informe a Razão Social" required />
         </div>
  
-        <div>
-            <label htmlFor="cnpj">CNPJ*</label>
-            <input name="cnpj" type="text" id="cnpj" placeholder="00.000.000/000-00" required />
-        </div>
+        <ImaskCnpj/>
 
-        <div>
-            <label htmlFor="fone">Telefone comercial*</label>
-            <input name="fone" type="tel" id="fone" placeholder="(00) 00000-0000" required />
-        </div>
+        <Imask/>
        
         <div>
             <label htmlFor="email">E-mail*</label>
-            <input name="email" type="email" id="email" placeholder="...@email.com" required />
+            <input name="email" type="email" placeholder="...@email.com" required />
         </div>
 
-        <Cep/>
+      <Cep/>
                
         <div>
             <label htmlFor="cadastroSenha">Senha*</label>
-            <input name="cadastroSenha" type="password" id="cadastroSenha" placeholder="Informe a senha" minLength="8" maxLength="8" required />
+            <input onBlur={event => setcadastroSenha(event.target.value)} name="cadastroSenha" type="password"  placeholder="Informe a senha" minLength="8" maxLength="8" required />
         </div>
 
         <div>
-            <label htmlFor="confirmSenha">Confirme a senha*</label>
-            <input name="confirmSenha" type="password" id="confirmSenha" placeholder="Confirme a senha" minLength="8" maxLength="8" required />
+            <label htmlFor="confSenha">Confirme a senha*</label>
+            <input onBlur={event => setConfSenha(event.target.value)} name="confSenha" type="password" placeholder="Confirme a senha" minLength="8" maxLength="8" required />
         </div>
 
         <h3 className="textShadowTitles">Responsável pela empresa</h3>
            
             <div>
                 <label htmlFor="nome">Nome completo*</label>
-                <input name="nome" type="text" id="nome" placeholder="Digite seu nome completo" required />
+                <input name="nome" type="text" placeholder="Digite seu nome completo" required />
             </div>
 
-            <div>
-                <label htmlFor="fonePessoal">Telefone*</label>
-                <input name="fonePessoal" type="tel" id="fonePessoal" placeholder="(00) 00000-0000" required />
-            </div>
+            <Imask/>
            
             <div className="campo">
                 <p>(*) Campo obrigatório</p>                    
             </div>
 
-            <div id="divBtnEnviar">
-                <button type="submit" value="Validar" id="btnEnviar">Enviar</button>
+            <div className="divBtnEnviar">
+                <button type="submit" className="btnEnviar">Enviar</button>
               </div>
               </form>               
                          
