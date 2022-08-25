@@ -158,6 +158,14 @@ h2, h3{
     color:#285e2f;     
 }
 
+.telefoneDoCliente{
+    text-align: right;
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    justify-content: center;    
+}
+
 #formAgendamento{
     text-align: center;
     display: flex;
@@ -205,7 +213,7 @@ h2, h3{
     gap: 10px;
 }
 
-#formCadastre{
+.formCadastre{
     border: solid 2px #62ab74;    
     border-radius: 20px;    
     display: flex;
@@ -213,13 +221,13 @@ h2, h3{
     margin-top: 10px;
 }
 
-#formCadastre input{
+.formCadastre input{
     display: flex; 
     width: 90%;   
     margin-left: 5px;
 }
 
-#formCadastre label{
+.formCadastre label{
     margin-left: 5px;
 }
 
@@ -233,14 +241,14 @@ h2, h3{
 .campo{
     margin-top: 15px;    
 }
-#divBtnEnviar{
+.divBtnEnviar{
     display:flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
 }
 
-#btnEnviar{
+.btnEnviar{
     background-color: #399045;
     color: #020f04;
     font-weight: 900;
@@ -316,7 +324,7 @@ footer h3{
 }
 
 /* ================CLASSES UNICAS================ */
-.textShadowTitles{
+h2 {
     color:#399045;
     /* text-shadow: 1px 1px #2d392d8f; */
 }
