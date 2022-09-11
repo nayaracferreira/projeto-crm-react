@@ -348,6 +348,31 @@ h2 {
     margin-top: 10px; 
 }
 
+/* ===================Calendário=================== */
+.react-calendar {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+.react-calendar button span {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #285e2f;
+}
+.react-calendar__month-view__weekdays abbr {
+  color: #285e2f;
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.react-calendar__tile {
+  color: #285e2f;
+  font-size: 1em;
+}
+
 /* ===================Media Querys=================== */
 @media only screen and (max-width: 680px) {
     
