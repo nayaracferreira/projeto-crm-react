@@ -1,23 +1,18 @@
-import React from 'react'
-
-import desenho from'../../assets/desenho.jpg';
-
-import { AppFooter, AppHeader } from '../organisms';
-
+import React from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import { AppHeader, AppFooter } from "../organisms";
 
 export default function Agenda() {
   return (
-    <div className="body">    
-    
-    <AppHeader/>
+    <div>
+      <AppHeader />
 
-    <main>
-        <h2 className="textShadowTitles">Desculpe-nos, página em construção...</h2>
-        <img src={desenho} className="provisorio" alt="Imagem do site Dreamstime - Desenho de um homem vestido com epi(Equipamento de Proteção Individual) com os dois braços meio levantado demonstrando o sinal de parada" />       
-    </main>
+      <main>
+        <Calendar />
+      </main>
 
-   <AppFooter/>
-   
-</div>
-  )
+      <AppFooter />
+    </div>
+  );
 }
